@@ -1,0 +1,131 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast / Technical Brutalism)",
+  "emotional_tone": "Technical precision, Pro-Audio Studio, Control, Artistry, DAWs like Izotope RX / Splice",
+  "typography": {
+    "fonts": {
+      "heading": "Clash Display",
+      "body": "JetBrains Mono",
+      "accent": "Bodoni Moda",
+      "banned": ["Inter", "Roboto", "Open Sans", "Syne"]
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight",
+      "h4": "text-lg sm:text-xl font-bold",
+      "body": "text-base leading-relaxed font-mono",
+      "labels": "text-xs uppercase tracking-[0.2em] font-mono font-bold text-[#A1A1A6]"
+    }
+  },
+  "colors": {
+    "primary": {
+      "base": "#FFFFFF",
+      "hover": "#E5E5E5"
+    },
+    "background": {
+      "main": "#0A0A0A",
+      "surface": "#141414",
+      "surface_raised": "#1C1C1E"
+    },
+    "accents": {
+      "recording": "#FF3B30",
+      "meter_low": "#34C759",
+      "meter_mid": "#FFCC00",
+      "meter_high": "#FF3B30",
+      "processing": "#007AFF"
+    },
+    "text": {
+      "primary": "#F5F5F7",
+      "secondary": "#A1A1A6",
+      "muted": "#86868B"
+    },
+    "borders": {
+      "default": "rgba(255, 255, 255, 0.1)",
+      "focus": "#007AFF"
+    },
+    "rules": [
+      "Avoid pure black (#000000); use deep obsidian (#0A0A0A) tinted slightly.",
+      "Use Signal Red sparingly for recording/alerts only.",
+      "Volt Blue or Amber strictly for audio meters.",
+      "DO NOT USE PURPLE OR TEAL GRADIENTS."
+    ]
+  },
+  "spacing_and_layout": {
+    "system": "Tailwind standard with generous spacing (p-6, p-8, p-12). Containers with borders must use internal padding.",
+    "grid": "Control Room Grid for Dashboard / Studio elements. Use grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-4 or gap-6.",
+    "surfaces": "Grid Borders (Technical Look). Border-collapse style layout. Expose the skeleton. 1px solid strokes instead of soft shadows.",
+    "alignment": "Left-align for dense audio data and meters. Center-align only for empty states or hero headers."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-white text-black font-bold rounded-none hover:bg-neutral-200 transition-colors",
+      "secondary": "border border-white/20 text-white bg-transparent rounded-none hover:bg-white/5 transition-colors",
+      "recording": "bg-[#FF3B30] text-white rounded-none hover:bg-red-400 animate-pulse font-mono uppercase tracking-widest",
+      "destructive": "bg-transparent border border-[#FF3B30]/50 text-[#FF3B30] hover:bg-[#FF3B30] hover:text-white rounded-none transition-colors"
+    },
+    "inputs": {
+      "default": "bg-[#141414] border border-white/10 rounded-none text-white focus:ring-1 focus:ring-white font-mono text-sm focus:outline-none"
+    },
+    "cards": {
+      "style": "bg-[#141414] border border-white/10 rounded-none shadow-none",
+      "hover": "-translate-y-1 border-white/30 transition-all"
+    },
+    "custom_elements": {
+      "audio_meter": "Vertical flex layout with green, yellow, red gradient fill based on input volume. Use 1px gap between blocks for an LED console look.",
+      "waveform": "Canvas or SVG based rendering. Use #007AFF for processed audio, #FF3B30 for active recording, and #A1A1A6 for empty state tracks."
+    },
+    "shadcn_rules": [
+      "Remove all rounded corners (border-radius) to match brutalist style (e.g., rounded-none everywhere).",
+      "Override card padding to p-6.",
+      "Do NOT use HTML inputs for calendar/dropdowns. Use Shadcn + customize.",
+      "Use Sonner for toast, customized to brutalist dark mode."
+    ]
+  },
+  "motion_and_interactions": {
+    "hover": "Explicit text and bg color change. e.g., hover:bg-white/10 hover:text-white.",
+    "focus": "High contrast ring focus:ring-2 focus:ring-white focus:outline-none.",
+    "animations": {
+      "waveform": "Smooth continuous flow using requestAnimationFrame.",
+      "recording_pulse": "Slow ease-in-out pulse for active recording state.",
+      "transitions": "transition-all duration-200 ease-out."
+    }
+  },
+  "icons_and_assets": {
+    "library": "lucide-react",
+    "style": "Sharp, technical, constant stroke width.",
+    "images": {
+      "hero_microphone": {
+        "url": "https://images.unsplash.com/photo-1660832459346-d069f58410c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBzdHVkaW8lMjBtaWNyb3Bob25lJTIwZGFya3xlbnwwfHx8fDE3NzgxMTQzODB8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero Background / Studio Vibe",
+        "description": "Dark, moody professional studio microphone for landing or dashboard hero."
+      },
+      "audio_waveform": {
+        "url": "https://images.unsplash.com/photo-1765445773804-673b765aed52?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwyfHxhdWRpbyUyMHdhdmVmb3JtJTIwZGlnaXRhbHxlbnwwfHx8fDE3NzgxMTQzOTF8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Visualizer / Tech Background",
+        "description": "Abstract digital waveform glitch art for model training empty states."
+      },
+      "audio_interface": {
+         "url": "https://images.unsplash.com/photo-1766182065635-75b013345dc3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwyfHxtdXNpYyUyMHN0dWRpbyUyMGF1ZGlvJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc3ODExNDM5MHww&ixlib=rb-4.1.0&q=85",
+         "category": "Hardware / Processing Context",
+         "description": "Red audio interface for the API/Export section context."
+      }
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure min 4.5:1 for body, 3:1 for large text. Use Text Shadow over waveforms if needed.",
+    "testing_attributes": "All interactive elements MUST use data-testid attributes (e.g., data-testid='record-take-button').",
+    "motion": "Respect prefers-reduced-motion for visualizers."
+  },
+  "instructions_to_main_agent": [
+    "Install JetBrains Mono and Clash Display from Google Fonts or local font face. Map them in Tailwind config.",
+    "All application text, copy, and instructions MUST be in Spanish.",
+    "Do NOT use rounded corners (remove rounded-* classes from Shadcn components). Apply rounded-none globally for brutalist/industrial sharp edges.",
+    "Build the dashboard using the Control Room Grid protocol (grid-cols-1 md:grid-cols-3) with tight gaps.",
+    "For the Guided Voice Training Studio, prioritize real-time waveform elements. Provide dummy visualizer using Canvas/SVG or CSS animations if real audio processing isn't hooked up.",
+    "Implement the 'Audio Cleaner' and 'Training Package Export' logic/UI as described in the problem statement.",
+    "Never use purple or teal gradients.",
+    "Ensure all buttons, tabs, forms, and inputs have proper data-testid attributes for testing.",
+    "Use standard HTML/Tailwind for pure layout but rely on Shadcn/ui (customized to brutalism) for all interactive logic (Forms, Modals, Progress)."
+  ]
+}
